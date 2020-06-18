@@ -1,1 +1,2 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+### Links
+- https://github.com/lfades/next-with-apollo
