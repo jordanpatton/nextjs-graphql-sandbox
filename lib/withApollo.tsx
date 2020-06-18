@@ -2,6 +2,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient, { InMemoryCache } from 'apollo-boost';
 import withApollo from 'next-with-apollo';
 
+/** Provides Apollo per page. */
 export default withApollo(
     ({ initialState }) => new ApolloClient({
         cache: new InMemoryCache().restore(initialState || {}),
