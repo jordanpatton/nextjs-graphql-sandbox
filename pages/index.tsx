@@ -1,9 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { getDataFromTree } from '@apollo/react-ssr';
 import gql from 'graphql-tag';
-
-import withApollo from '../lib/withApollo';
 
 const EXAMPLE_GQL = gql`
     query GetContinents {
@@ -20,4 +17,4 @@ const Index: React.FC = () => {
     return <pre>{JSON.stringify(data, null, 4)}</pre>;
 };
 
-export default withApollo(Index, { getDataFromTree });
+export default Index;

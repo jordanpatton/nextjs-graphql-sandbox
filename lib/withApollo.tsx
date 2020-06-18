@@ -3,12 +3,10 @@ import ApolloClient, { InMemoryCache } from 'apollo-boost';
 import withApollo from 'next-with-apollo';
 
 export default withApollo(
-    ({ initialState }) => {
-        return new ApolloClient({
-            uri: 'https://countries.trevorblades.com',
-            cache: new InMemoryCache().restore(initialState || {})
-        });
-    },
+    ({ initialState }) => new ApolloClient({
+        cache: new InMemoryCache().restore(initialState || {}),
+        uri: 'https://countries.trevorblades.com',
+    }),
     {
         render: ({ Page, props }) => {
             return (
